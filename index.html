@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Shape Generator</title>
+</head>
+
+<body>
+    <h1 class="title_app">Shape Generator</h1>
+    <section class="main">
+        <div class="select_properties">
+            <div class="input">
+                <label for="select-shape">Select Shape :</label>
+                <select id="select-shape">
+                    <option value="Square">Square</option>
+                    <option value="Circle">Circle</option>
+                </select>
+            </div>
+            <div class="input input_color">
+                <label for="select-color">Select color fill :</label>
+                <input type="color" id="select-color" />
+            </div>
+            <div class="input input_stroke">
+                <label for="select-stroke_width">Select width stroke :</label>
+                <input type="number" max="25" id="select-stroke_width" />
+            </div>
+            <div class="input input_stroke_color">
+                <label for="select-stroke_color">Select color stroke :</label>
+                <input type="color" id="select-stroke_color" />
+            </div>
+            <div class="input">
+                <button class="draw">draw</button>
+            </div>
+        </div>
+        <div id="area"></div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"
+        integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

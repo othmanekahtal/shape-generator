@@ -1,0 +1,112 @@
+$light_color: #f5f4f4;
+$white_color: #f1f1f1;
+$primary_color: #28b485;
+$secondary_color: #7ed56f;
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;700&display=swap");
+
+* {
+  &,
+  &:after,
+  &:before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+}
+
+body {
+  background-color: $light_color;
+  padding: 75px 50px;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Dosis", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3;
+  position: relative;
+}
+
+.title_app {
+  background-image: linear-gradient(to right, $primary_color, $secondary_color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-weight: 700;
+  font-size: 45px;
+  letter-spacing: 10px;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    transform: skewY(2deg) skewX(5deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 1.5rem rgba(0, 0, 0, 0.2);
+  }
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  column-gap: 100px;
+}
+
+select,
+.input_stroke input {
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  border-radius: 5px;
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid darken($light_color, 25%);
+  padding: 5px 10px;
+  margin: 0;
+  width: 150px;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
+
+label {
+  display: block;
+  padding-bottom: 15px;
+}
+
+.input {
+  margin: 25px 0;
+}
+
+#area {
+  position: relative;
+  width: 650px;
+  height: 650px;
+  background-color: white;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.draw {
+  font-weight: 300;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 7.5px 25px;
+  font-size: 18px;
+  color: white;
+  border: none;
+  background-image: linear-gradient(
+    to right top,
+    $primary_color,
+    $secondary_color
+  );
+  transition: background-image 0.35s ease-in-out;
+
+  &:active {
+    background-image: linear-gradient(
+      to right top,
+      darken($primary_color, 10%),
+      darken($secondary_color, 10%)
+    );
+  }
+}
